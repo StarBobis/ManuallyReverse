@@ -11,8 +11,8 @@ Manually reverse a game mod with python scripts.
 # Usage
 - Download DBMT from https://github.com/StarBobis/DirectX-BufferModTool/releases so you can get the Configs folder in it, manually reverse mod need it's ExtractTypes folder to work.
 - Clone this repository and open it with VSCode, or just edit the reverse_mod_manually.py with notepad.
-- Open reverse_mod_manually.py and follow the comment to fill your mod's folder path and filename.
-- Fill the GameName and ConfigFolderPath in GlobalConfig()
+- Edit reverse_mod_manually.py and follow the comment to fill your mod's folder path and filename.
+- Fill the GameName and ConfigFolderPath in GlobalConfig() 
 - Then run reverse_mod_manually.py and you will see a Reverse folder in your mod folder.
 
 # Ask For Help
