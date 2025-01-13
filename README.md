@@ -1,6 +1,8 @@
 # ManuallyReverse
 
-Manually reverse a game mod with python scripts.
+Manually reverse a game mod to .ib .vb .fmt model that blender can import with python scripts.
+
+Used to Fix Old Broken mods.
 
 # Supported Game
 - GI
@@ -21,6 +23,7 @@ https://discord.gg/sMdsGAptss
 Notice: Reverse can only talk in our #drama-talk channel.
 
 # Hide In Drak
+- The reason you reverse a mod is: Fix Broken Mod (if it not works as you wish in any point,it's broken)
 - Most of the mod author won't be happy if you publicly reverse and rip their model from their mod, don't ask why, people just don't get happy.
 - You should always ask mod author to try to get the model, that is the easiest way (in most case), if they don't agree, then you will use this scripts in secret (yes, who cares).
 
