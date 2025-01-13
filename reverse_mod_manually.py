@@ -36,8 +36,10 @@ if __name__ == "__main__":
     # our Configs\GameTypes\ folder contains every game's d3d11 gametype.
     g = GlobalConfig(
         # must specify gamename, which is your gametype config folder name.
+        # here is your mod's game name in DBMT.
         GameName="HSR",
         # must specify where your config file is.
+        # here is your DBMT's Config folder path.
         ConfigFolderPath="C:\\Users\\Administrator\\Desktop\\net8.0-windows10.0.22621.0\\Configs\\",
         # this GameLoaderPath is not necessary in mod reverse,but need it to create this class.
         GameLoaderPath="C:\\Users\\Administrator\\Desktop\\LoadersDev\\"
