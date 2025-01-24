@@ -19,16 +19,17 @@ if __name__ == "__main__":
 
     # 2.add your index buffer file path into index_buffer_filepath_list.
     index_buffer_filepath_list = []
-    index_buffer_filepath_list.append(os.path.join(mod_root_folder,"c4a3a856-Head.buf"))
-    index_buffer_filepath_list.append(os.path.join(mod_root_folder,"c4a3a856-Body.buf"))
-    index_buffer_filepath_list.append(os.path.join(mod_root_folder,"c4a3a856-Dress.buf"))
+    index_buffer_filepath_list.append(os.path.join(mod_root_folder,"5ec5fdb7-Head.buf"))
+    # index_buffer_filepath_list.append(os.path.join(mod_root_folder,"c4a3a856-Body.buf"))
+    # index_buffer_filepath_list.append(os.path.join(mod_root_folder,"c4a3a856-Dress.buf"))
+
     # 3.fill a dict thant contains category name and buf file path
     # in hoyoverse games there is only 3 possible category name: Position, Texcoord, Blend
     category_name_buf_file_path_dict = {}
-    category_name_buf_file_path_dict["Position"] = os.path.join(mod_root_folder, "c4a3a856-Position.buf")
+    category_name_buf_file_path_dict["Position"] = os.path.join(mod_root_folder, "5ec5fdb7-Position.buf")
     # category_name_buf_file_path_dict["Position"] = os.path.join(mod_root_folder, "FireflyBodyPosition.BOOBS.buf")
-    category_name_buf_file_path_dict["Texcoord"] = os.path.join(mod_root_folder, "c4a3a856-Texcoord.buf")
-    category_name_buf_file_path_dict["Blend"] = os.path.join(mod_root_folder, "c4a3a856-Blend.buf")
+    category_name_buf_file_path_dict["Texcoord"] = os.path.join(mod_root_folder, "5ec5fdb7-Texcoord.buf")
+    category_name_buf_file_path_dict["Blend"] = os.path.join(mod_root_folder, "5ec5fdb7-Blend.buf")
 
     # trigger auto game type detect to know all the possible GameType it use.
     # we need a global config here to read gametype config json for us.
@@ -36,13 +37,12 @@ if __name__ == "__main__":
     # our Configs\GameTypes\ folder contains every game's d3d11 gametype.
     g = GlobalConfig(
         # must specify gamename, which is your gametype config folder name.
-        # here is your mod's game name in DBMT.
-        GameName="HSR",
-        # must specify where your config file is.
-        # here is your DBMT's Config folder path.
-        ConfigFolderPath="C:\\Users\\Administrator\\Desktop\\net8.0-windows10.0.22621.0\\Configs\\",
-        # this GameLoaderPath is not necessary in mod reverse,but need it to create this class.
-        GameLoaderPath="C:\\Users\\Administrator\\Desktop\\LoadersDev\\"
+        # here is your mod's game name belong to.
+        GameName="HI3",
+
+        # here is your D3D11GameType's Config folder path.
+        # usually you don't need to modify this path.
+        ConfigFolderPath="configs\\",
         )
     
     matched_gametypename_list = g.D3D11GameTypeConfig.detect_game_type(category_name_buf_file_path_dict=category_name_buf_file_path_dict,reverse=True)

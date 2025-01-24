@@ -1,0 +1,50 @@
+
+{
+	"CategoryDrawCategoryMap":{
+		"Position":"Position",
+		"Texcoord":"Texcoord"
+	},
+	"GPU-PreSkinning":false,
+	"OrderedFullElementList":[
+		"POSITION","NORMAL","TEXCOORD"
+	],
+	"D3D11ElementList":[
+		{
+			"SemanticName":"POSITION",
+			"SemanticIndex":"0",
+			"Format":"R32G32B32_FLOAT",
+			"InputSlot":"0",
+			"InputSlotClass":"per-vertex",
+			"InstanceDataStepRate":"0",
+			"ByteWidth":"12",
+			"ExtractSlot":"vb0",
+			"ExtractTechnique":"trianglelist",
+			"Category":"Position"
+		},
+		{
+			"SemanticName":"NORMAL",
+			"SemanticIndex":"0",
+			"Format":"R32G32B32_FLOAT",
+			"InputSlot":"0",
+			"InputSlotClass":"per-vertex",
+			"InstanceDataStepRate":"0",
+			"ByteWidth":"12",
+			"ExtractSlot":"vb0",
+			"ExtractTechnique":"trianglelist",
+			"Category":"Position"
+		},
+		{
+			"SemanticName":"TEXCOORD",
+			"SemanticIndex":"0",
+			"Format":"R32G32_FLOAT",
+			"InputSlot":"0",
+			"InputSlotClass":"per-vertex",
+			"InstanceDataStepRate":"0",
+			"ByteWidth":"8",
+			"ExtractSlot":"vb1",
+			"ExtractTechnique":"trianglelist",
+			"Category":"Texcoord"
+		}
+		
+	]
+}

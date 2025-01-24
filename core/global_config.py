@@ -100,10 +100,11 @@ class FrameAnalysisLog:
 class GlobalConfig:
     # We put all loader in a fixed folder structure so can locate them only by game name.
     GameName:str
-    # This folder contains all 3dmigoto loader seperated by game name.
-    GameLoaderPath:str
     # This folder contains all config json file.
     ConfigFolderPath:str
+    # This folder contains all 3dmigoto loader seperated by game name.
+    GameLoaderPath:str = field(init=False)
+    
 
     # Where 3Dmigoto's d3d11.dll located.
     LoaderFolder:str = field(init=False)
@@ -122,7 +123,7 @@ class GlobalConfig:
 
     def __post_init__(self):
 
-        self.initialize_folder_path()
+        # self.initialize_folder_path()
         self.initialize_d3d11_gametype()
 
     def initialize_folder_path(self):
@@ -163,5 +164,5 @@ class GlobalConfig:
             return ""
 
     def initialize_d3d11_gametype(self):
-        gametype_folder_path = os.path.join(self.ConfigFolderPath, "ExtractTypes\\" + self.GameName + "\\")
+        gametype_folder_path = os.path.join(self.ConfigFolderPath,   self.GameName + "\\")
         self.D3D11GameTypeConfig = D3D11GameTypeLv2(GameTypeConfigFolderPath=gametype_folder_path)
